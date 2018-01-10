@@ -14,7 +14,7 @@
 > outcome or, when there is uncertainty, the best expected
 > outcome" 
 
-[@Russel:2010]
+[@Russell:2009]
 
 Algorithms that can improve their performance based on training data
 
@@ -76,11 +76,15 @@ know the classes
 
 ## Regression
 
+Predict continuous values
+
 ![](images/regression1.png)
 
 [@Bishop:2006]
 
 ## Regression
+
+Predict continuous values
 
 ![](images/regression2.png)
 
@@ -88,11 +92,15 @@ know the classes
 
 ## Regression
 
+Predict continuous values
+
 ![](images/regression3.png)
 
 [@Bishop:2006]
 
 ## Regression
+
+Predict continuous values
 
 ![](images/regression4.png)
 
@@ -100,11 +108,15 @@ know the classes
 
 ## Regression
 
+Predict continuous values
+
 ![](images/regression5.png)
 
 [@Bishop:2006]
 
 ## Regression
+
+Predict continuous values
 
 ![](images/regression6.png)
 
@@ -112,17 +124,27 @@ know the classes
 
 ## Regression
 
+Predict continuous values
+
 ![](images/regression7.png)
 
 [@Bishop:2006]
 
 ## Classification
 
+Predict discrete values
+
 ![](images/classification.png)
 
 [@Bishop:2006]
 
+<aside class="notes">
+Discrete values are also called classes
+</aside>
+
 ## Clustering
+
+Find distributions
 
 ![](images/Figure9.1a.png)
 
@@ -130,11 +152,15 @@ know the classes
 
 ## Clustering
 
+Find distributions
+
 ![](images/Figure9.1b.png)
 
 [@Bishop:2006]
 
 ## Clustering
+
+Find distributions
 
 ![](images/Figure9.1c.png)
 
@@ -142,11 +168,15 @@ know the classes
 
 ## Clustering
 
+Find distributions
+
 ![](images/Figure9.1d.png)
 
 [@Bishop:2006]
 
 ## Clustering
+
+Find distributions
 
 ![](images/Figure9.1h.png)
 
@@ -154,9 +184,17 @@ know the classes
 
 ## Clustering
 
+Find distributions
+
 ![](images/Figure9.1i.png)
 
 [@Bishop:2006]
+
+## Types of ML algorithms
+
+* Regression: Predict continuous values
+* Classification: Predict discrete values
+* Clustering: Find distributions
 
 ## Uses
 
@@ -164,6 +202,33 @@ know the classes
 * classification: recommender systems
 * neural networks: handwriting recognition
 * HMM: speech recognition
+
+## Email filtering
+
+* is email spam or not?
+* use words as features
+
+$$
+P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
+$$
+
+[@Sahami:1998]
+
+## Recommender systems
+
+![](images/recommenders.jpg)
+
+http://blog.soton.ac.uk/hive/2012/05/10/recommendation-system-of-hive/
+
+## Handwriting recognition
+
+![](images/mnist.png)
+
+## Speech recognition
+
+![](images/hmm_speech.png)
+
+http://recognize-speech.com/images/LanguageModel/left_to_right_HMM.png
 
 ## Vis and ML
 
@@ -281,9 +346,6 @@ Works well when you have no real metric for what you're looking for
 
 use a more principled approach
 
-* Tuner
-
-
 ## Objective measures
 
 <figure>
@@ -314,6 +376,23 @@ use a more principled approach
 
 [@Torsney-Weir:2011]
 
+## Real-time parameter tuning
+
+![](images/lindhart.png)
+
+Lindhart et al. 2018?
+
+## Building models
+
+* Meta parameters can have a large influence on performance
+* Almost *all* ML algorithms require tuning
+* Manual tuning is time consuming and error prone
+
+<aside class="notes">
+Conclude
+
+CS people love algorithms but params are important
+</aside>
 
 # Validating and verifying models
 
@@ -339,7 +418,25 @@ use a more principled approach
 
 ## Sliceplorer views
 
-* show the ML algorithm example
+<div class="columns">
+<div class="column">
+### Single layer NN (26 nodes)
+![](images/sp1.png)
+
+### SVM (polynomial kernel)
+![](images/sp2.png)
+</div>
+<div class="column">
+
+### Dual layer NN (5 and 3 nodes)
+![](images/sp3.png)
+
+### SVM (RBF kernel)
+![](images/sp4.png)
+</div>
+</div>
+
+[@Torsney-Weir:2017]
 
 ## Tuner error views
 
@@ -347,6 +444,31 @@ Examining multi-dimensional functions
 
 * error view shows where model is unsure
 * can visually verify the model
+
+<div class="columns">
+  <div class="column">
+    <h3 id="prediction">Prediction</h3>
+    <figure>
+    <img src="images/error_view.png" alt="Error view" /><figcaption>Error view</figcaption>
+    </figure>
+  </div>
+  <div class="column">
+    <h3 id="optimization">Optimization</h3>
+    <figure>
+    <img src="images/gain_view.png" alt="Gain view" /><figcaption>Gain view</figcaption>
+    </figure>
+  </div>
+</div>
+
+## Validating and verifying models
+
+* Summary statistics are not always enough
+* Balancing multiple objectives is difficult
+* Certain training points might be very important
+
+<aside class="notes">
+Conclude
+</aside>
 
 # Understanding models
 
@@ -398,16 +520,19 @@ algorithms are trying to replicate these systems in some sense
 
 * interaction
 * walkthroughs
-* simpler models ala LIME [@cite]
+* simpler models ala LIME (Ribeiro et al. 2016)
+* direct inspection
 
 ## Examples
 
 * regression: Muhlbacher and Piringer
 * clustering: Dis-function
 * text processing: TagRefinery
-* smaller models: NYU paper
+* smaller models: Explanation explorer
 
 ## A partition-based framework for building and validating regression models
+
+Directly interact with the model building process
 
 ![](images/muhlbacher2013.png)
 
@@ -415,15 +540,23 @@ algorithms are trying to replicate these systems in some sense
 
 ## Dis-function
 
+Build a distance function interactively
+
 ![](images/brown2012.png)
 
 [@Brown:2012]
 
 ## TagRefinery
 
+Tutorial/walkthrough system
+
 ![Text processing pipeline](images/tagrefinery_pipeline.png)
 
 [@Kralj:2017]
+
+<aside class="notes">
+Popular in video games
+</aside>
 
 ## TagRefinery
 
@@ -437,7 +570,49 @@ algorithms are trying to replicate these systems in some sense
 
 [@Kralj:2017]
 
-## NYU paper
+## LIME method
+
+![](images/lime1.png)
+
+![](images/lime2.png)
+
+[@Ribeiro:2016a]
+
+## Explanation explorer
+
+![](images/krause2017.png)
+
+[@Krause:2017]
+
+## Direct inspection
+
+e.g. hidden states in a neural network
+
+![](images/nn.jpg)
+
+## LSTMvis
+
+![](images/lstmvis_interface.png)
+
+[@Strobelt:2018]
+
+## LSTMvis
+
+![](images/lstmvis_detail.png)
+
+[@Strobelt:2018]
+
+## DeepEyes
+
+![](images/deepeyes_interface.png)
+
+[@Pezzotti:2018]
+
+## DeepEyes
+
+![](images/deepeyes_detail.png)
+
+[@Pezzotti:2018]
 
 # Machine learning helping vis
 
@@ -462,6 +637,10 @@ algorithms are trying to replicate these systems in some sense
 * KeyVis
 * FluidExplorer
 
+<aside class="notes">
+Clustering is used alot to group elements before visual inspection
+</aside>
+
 ## Cluster and calendar view
 
 ![](images/wijk1999_1.png)
@@ -482,14 +661,14 @@ algorithms are trying to replicate these systems in some sense
 
 ## KeyVis
 
-goal: find relevant papers
-
-## KeyVis
-
 step 1: cluster the papers based on keywords
 
 ![](images/keyvis_clustering.png)
 [@Isenberg:2017]
+
+<aside class="notes">
+Goal is to find relevant papers
+</aside>
 
 ## KeyVis
 
@@ -503,6 +682,10 @@ step 2: give an interface to this clustering
 ![](images/fluidexplorer_pipeline.png)
 
 [@Bruckner:2010]
+
+<aside class="notes">
+Goal is to find good flame simulations. This is hard even for experts!
+</aside>
 
 ## FluidExplorer
 
@@ -518,7 +701,20 @@ step 2: give an interface to this clustering
 
 ## Classification
 
-any?
+![](images/brochu2010.png)
+
+[@Brochu:2010]
+
+<aside class="notes">
+Same idea, different implementation.
+Goal is to find good flame simulations. This is hard even for experts!
+</aside>
+
+## Understanding models
+
+* Just an answer is not enough (show your work)
+* Humans have trouble understanding complex models
+* Interactivity can bring people into the model
 
 # The future!
 
@@ -526,11 +722,15 @@ any?
 
 * More using ML to build models for vis tools
 * More generalized tools
+* Understand what "understandability" means
 
 <aside class="notes">
 Active learning
+Humans: intuition, computers: data processing
 
 Many tools are specific to a type of model
+
+Understandability is only asserted
 </aside>
 
 ## Thanks!
