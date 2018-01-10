@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Thomas Torsney-Weir">
+  <title>Visualization of machine learning algorithms</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="theme.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section class="slide center">
+  <h1 class="title">Visualization of machine learning algorithms</h1>
+  <p class="author">Thomas Torsney-Weir</p>
+  <p class="date">VDA research group, University of Vienna</p>
+</section>
+
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<ul>
+<li>Introduction to Machine learning</li>
+<li>Vis helping machine learning</li>
+<li>Machine learning helping vis</li>
+</ul>
+</section>
+<section id="what-is-machine-learning" class="slide level2">
+<h2>What is machine learning?</h2>
+<blockquote>
+<p>&quot;A rational agent is one that acts so as to achieve the best outcome or, when there is uncertainty, the best expected outcome&quot;</p>
+</blockquote>
+<p><span class="citation" data-cites="Russell:2009">Russell, Stuart, and Peter Norvig. <em>Artificial intelligence: A modern approach</em>, 2009.</span></p>
+<p>Algorithms that can improve their performance based on training data</p>
+</section>
+<section id="what-is-machine-learning-1" class="slide level2">
+<h2>What is machine learning?</h2>
+<figure>
+<img src="images/ml_why_1.svg" />
+</figure>
+<aside class="notes">
+Let's say you want to help your friend Isaac Newton figure out how to dodge apples
+</aside>
+</section>
+<section id="what-is-machine-learning-2" class="slide level2">
+<h2>What is machine learning?</h2>
+<figure>
+<img src="images/ml_why_2.svg" />
+</figure>
+<aside class="notes">
+Record data on behavior, come up with a model. This was done in the past! This is hard!
+</aside>
+</section>
+<section id="what-is-machine-learning-3" class="slide level2">
+<h2>What is machine learning?</h2>
+<figure>
+<img src="images/ml_why_3.svg" />
+</figure>
+<aside class="notes">
+So we can replace the human. Computers are good at processing data!
+</aside>
+</section>
+<section id="what-is-machine-learning-4" class="slide level2">
+<h2>What is machine learning?</h2>
+<figure>
+<img src="images/ml_why_4.svg" />
+</figure>
+<aside class="notes">
+So we can just use a machine learning algorithm to replace the model for us! How does this work?
+</aside>
+</section>
+<section id="types-of-algorithms" class="slide level2">
+<h2>Types of algorithms</h2>
+<ul>
+<li>Regression</li>
+<li>Classification</li>
+<li>Clustering</li>
+</ul>
+<aside class="notes">
+go over types of algorithms, ask about tasks.
+</aside>
+</section>
+<section id="what-to-use" class="slide level2">
+<h2>What to use?</h2>
+<ul>
+<li>Regression: Predict continuous values</li>
+<li>Classification: Predict discrete values</li>
+<li>Clustering: Find distributions</li>
+</ul>
+<aside class="notes">
+People often confuse clustering as classification where they don't know the classes
+</aside>
+</section>
+<section id="regression" class="slide level2">
+<h2>Regression</h2>
+<p>Predict continuous values</p>
+<figure>
+<img src="images/regression1.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="regression-1" class="slide level2">
+<h2>Regression</h2>
+<p>Predict continuous values</p>
+<figure>
+<img src="images/regression2.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="regression-2" class="slide level2">
+<h2>Regression</h2>
+<p>Predict continuous values</p>
+<figure>
+<img src="images/regression3.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="regression-3" class="slide level2">
+<h2>Regression</h2>
+<p>Predict continuous values</p>
+<figure>
+<img src="images/regression4.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="regression-4" class="slide level2">
+<h2>Regression</h2>
+<p>Predict continuous values</p>
+<figure>
+<img src="images/regression5.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="regression-5" class="slide level2">
+<h2>Regression</h2>
+<p>Predict continuous values</p>
+<figure>
+<img src="images/regression6.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="regression-6" class="slide level2">
+<h2>Regression</h2>
+<p>Predict continuous values</p>
+<figure>
+<img src="images/regression7.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="classification" class="slide level2">
+<h2>Classification</h2>
+<p>Predict discrete values</p>
+<figure>
+<img src="images/classification.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+<aside class="notes">
+Discrete values are also called classes
+</aside>
+</section>
+<section id="clustering" class="slide level2">
+<h2>Clustering</h2>
+<p>Find distributions</p>
+<figure>
+<img src="images/Figure9.1a.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="clustering-1" class="slide level2">
+<h2>Clustering</h2>
+<p>Find distributions</p>
+<figure>
+<img src="images/Figure9.1b.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="clustering-2" class="slide level2">
+<h2>Clustering</h2>
+<p>Find distributions</p>
+<figure>
+<img src="images/Figure9.1c.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="clustering-3" class="slide level2">
+<h2>Clustering</h2>
+<p>Find distributions</p>
+<figure>
+<img src="images/Figure9.1d.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="clustering-4" class="slide level2">
+<h2>Clustering</h2>
+<p>Find distributions</p>
+<figure>
+<img src="images/Figure9.1h.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="clustering-5" class="slide level2">
+<h2>Clustering</h2>
+<p>Find distributions</p>
+<figure>
+<img src="images/Figure9.1i.png" />
+</figure>
+<p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
+</section>
+<section id="types-of-ml-algorithms" class="slide level2">
+<h2>Types of ML algorithms</h2>
+<ul>
+<li>Regression: Predict continuous values</li>
+<li>Classification: Predict discrete values</li>
+<li>Clustering: Find distributions</li>
+</ul>
+</section>
+<section id="uses" class="slide level2">
+<h2>Uses</h2>
+<ul>
+<li>naive Bayes: spam filtering</li>
+<li>classification: recommender systems</li>
+<li>neural networks: handwriting recognition</li>
+<li>HMM: speech recognition</li>
+</ul>
+</section>
+<section id="email-filtering" class="slide level2">
+<h2>Email filtering</h2>
+<ul>
+<li>is email spam or not?</li>
+<li>use words as features</li>
+</ul>
+<p><span class="math display">\[
+P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
+\]</span></p>
+<p><span class="citation" data-cites="Sahami:1998">Sahami, Mehran, Susan Dumais, David Heckerman, and Eric Horvitz. “A bayesian approach to filtering junk e-mail,” 1998.</span></p>
+</section>
+
+<section id="recommender-systems" class="slide level2">
+<h2>Recommender systems</h2>
+<figure>
+<img src="images/recommenders.jpg" />
+</figure>
+<p>
+  <a href="http://blog.soton.ac.uk/hive/2012/05/10/recommendation-system-of-hive/">
+    <span class="citation">http://blog.soton.ac.uk/hive/2012/05/10/recommendation-system-of-hive/</span>
+  </a>
+</p>
+</section>
+
+<section id="handwriting-recognition" class="slide level2">
+<h2>Handwriting recognition</h2>
+<figure>
+<img src="images/mnist.png" />
+</figure>
+</section>
+<section id="speech-recognition" class="slide level2">
+<h2>Speech recognition</h2>
+<figure>
+<img src="images/hmm_speech.png" />
+</figure>
+<p>
+  <a href="http://recognize-speech.com/images/LanguageModel/left_to_right_HMM.png">
+    <span class="citation">http://recognize-speech.com/images/LanguageModel/left_to_right_HMM.png</span>
+  </a>
+</p>
+</section>
+
+<section id="vis-and-ml" class="slide level2">
+<h2>Vis and ML</h2>
+<p>both vis and ML seem to have similar goals: make sense of complex data</p>
+
+<div class="columns">
+<div class="column">
+  <h3>Machine learning</h3>
+  <img src="images/ml_why_4.svg" />
+</div>
+<div class="column">
+  <h3>Visualization</h3>
+  <img style="height:320px;" src="images/morton2012.png" />
+  <p>
+    <span class="citation">
+      Morton, Kristi, Ross Bunker, Jock Mackinlay, Robert Morton, and Chris Stolte. “Dynamic workload driven data integration in Tableau,” 2012.
+    </span>
+  </p>
+</div>
+</div>
+</section>
+
+<section id="who-helps-whom" class="slide level2">
+<h2>Who helps whom?</h2>
+<h3 id="both">both!</h3>
+<ul>
+<li>Vis helps ML: evaluating models</li>
+<li>ML helps vis: ML for embedded analysis</li>
+</ul>
+</section>
+<section id="now-to-the-vis-part" class="slide level2">
+<h2>Now to the vis part</h2>
+<p>How do they work together?</p>
+<ul>
+<li>Building models</li>
+<li>Validating models</li>
+<li>Understanding models</li>
+<li>Embedding ML algorithms</li>
+</ul>
+</section>
+<section>
+  
+<section id="building-models" class="titleslide slide level1 center">
+<h1>Building models</h1>
+</section>
+
+<section id="what-are-meta-parameters" class="slide level2">
+<h2>What are meta parameters?</h2>
+<p>Meta parameters control how learning takes place</p>
+<ul>
+<li>Learning rate</li>
+<li>Number and size of network layers</li>
+<li>Slack variables</li>
+<li>Stopping conditions</li>
+</ul>
+</section>
+
+<section id="why-study-meta-parameters" class="slide level2">
+<h2>Why study meta-parameters?</h2>
+<div class="columns">
+<div class="column">
+  <img src="images/raw_brain.png" />
+</div>
+<div class="column">
+  <img src="images/good_seg.png" class="fragment" />
+</div>
+</div>
+<aside class="notes">
+So let's talk about image segmentation
+</aside>
+</section>
+
+<section id="why-study-meta-parameters-1" class="slide level2">
+<h2>Why study meta-parameters?</h2>
+<div class="columns">
+<div class="column">
+  <img src="images/good_seg.png" />
+</div>
+<div class="column">
+  <img src="images/bad_seg.png" />
+</div>
+</div>
+<aside class="notes">
+Same algo different params
+</aside>
+</section>
+
+<section id="manual-method" class="slide level2">
+<h2>Manual method</h2>
+<figure>
+<img src="images/2d_sampling_1.svg" />
+</figure>
+</section><section id="manual-method-1" class="slide level2">
+<h2>Manual method</h2>
+<figure>
+<img src="images/2d_sampling_2.svg" />
+</figure>
+</section>
+
+<section id="how-to-study-them" class="slide level2">
+<h2>How to study them?</h2>
+<p>run a bunch of models and examine outputs</p>
+<ul>
+<li>design galleries</li>
+<li>paramorama</li>
+</ul>
+<aside class="notes">
+Works well when you have no real metric for what you're looking for
+</aside>
+</section><section id="design-galleries" class="slide level2">
+<h2>Design galleries</h2>
+<figure>
+<img src="images/design_galleries_1.png" />
+</figure>
+<p><span class="citation" data-cites="Marks:1997">Marks, Joe, Brad Andalman, Paul A. Beardsley, William Freeman, Sarah Gibson, Jessica Hodgins, Thomas Kang, et al. “Design Galleries: A general approach to setting parameters for computer graphics and animation,” 1997.</span></p>
+</section><section id="design-galleries-1" class="slide level2">
+<h2>Design galleries</h2>
+<figure>
+<img src="images/design_galleries_2.png" />
+</figure>
+<p><span class="citation" data-cites="Marks:1997">Marks, Joe, Brad Andalman, Paul A. Beardsley, William Freeman, Sarah Gibson, Jessica Hodgins, Thomas Kang, et al. “Design Galleries: A general approach to setting parameters for computer graphics and animation,” 1997.</span></p>
+</section><section id="paramorama" class="slide level2">
+<h2>Paramorama</h2>
+<figure>
+<img src="images/paramorama_interface.png" />
+</figure>
+<p><span class="citation" data-cites="Pretorius:2011">Pretorius, A. Johannes, Mark-Anthony P. Bray, Anne E. Carpenter, and Roy A. Ruddle. “Visualization of parameter space for image analysis,” 2011.</span></p>
+</section><section id="how-to-study-them-1" class="slide level2">
+<h2>How to study them?</h2>
+<p>use a more principled approach</p>
+</section><section id="objective-measures" class="slide level2">
+<h2>Objective measures</h2>
+<figure>
+<img src="images/obj_measures.svg" />
+</figure>
+</section><section id="visual-parameter-space-exploration" class="slide level2">
+<h2>Visual parameter space exploration</h2>
+<ul>
+<li>intro</li>
+<li>conceptual pipeline</li>
+</ul>
+<figure>
+<img src="images/vpsa_pipeline.png" alt="conceptual pipeline" />
+</figure>
+<p>
+<span class="citation" data-cites="Sedlmair:2014"> Michael Sedlmair, Christoph Heinzl, Stefan Bruckner, Harald Piringer, and Torsten Möller &quot;Visual parameter space analysis: A conceptual framework&quot; IEEE Transactions on Visualization and Computer Graphics. 20(12) 2014. </span>
+</p>
+</section><section id="tuner" class="slide level2">
+<h2>Tuner</h2>
+<figure>
+<img src="images/tuner_pipeline.svg" alt="image segmentation pipeline" />
+</figure>
+<p><span class="citation" data-cites="Torsney-Weir:2011">Torsney-Weir, Thomas, Ahmed Saad, Torsten Möller, Britta Weber, Hans-Christian Hege, Jean-Marc Verbavatz, and Steven Bergner. “Tuner: Principled parameter finding for image segmentation algorithms using visual response surface exploration,” 2011.</span></p>
+</section>
+
+<section id="real-time-parameter-tuning" class="slide level2">
+<h2>Real-time parameter tuning</h2>
+<figure>
+<img src="images/lindhart.png" />
+</figure>
+<p><span class="caption">Lindhart et al. 2018?</span></p>
+</section>
+
+<section id="building-models-1" class="slide level2">
+<h2>Building models</h2>
+<ul>
+<li>Meta parameters can have a large influence on performance</li>
+<li>Almost <em>all</em> ML algorithms require tuning</li>
+<li>Manual tuning is time consuming and error prone</li>
+</ul>
+<aside class="notes">
+<p>Conclude</p>
+CS people love algorithms but params are important
+</aside>
+</section></section>
+<section>
+  
+<section id="validating-and-verifying-models" class="titleslide slide level1 center">
+  <h1>Validating and verifying models</h1>
+</section>
+
+<section id="what-do-we-mean" class="slide level2">
+<h2>What do we mean?</h2>
+<ul>
+<li>How do we know our models are working?</li>
+<li>model selection</li>
+</ul>
+<figure>
+<img src="images/vv_model.png" alt="model" /> 
+<figcaption>
+  <span class="citation" data-cites="UQreport:2012">Committee on Mathematical Foundations of Verification, Validation, and Uncertainty Quantification; Board on Mathematical Sciences and Their Applications, Division on Engineering and Physical Sciences, National Research Council. <em>Assessing the reliability of complex models: Mathematical and statistical foundations of verification, validation, and uncertainty quantification</em>, 2012. <a href="http://www.nap.edu/openbook.php?record_id=13395" class="uri">http://www.nap.edu/openbook.php?record_id=13395</a>.</span>
+</figcaption>
+</figure>
+</section>
+
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<ul>
+<li>HyperMoVal - local inspection</li>
+<li>Sliceplorer - global inspection</li>
+<li>Tuner - error inspection</li>
+</ul>
+</section><section id="hypermoval" class="slide level2">
+<h2>HyperMoVal</h2>
+<figure>
+<img src="images/hypermoval_interface.png" />
+</figure>
+<p><span class="citation" data-cites="Piringer:2010">Piringer, Harald, Wolfgang Berger, and Jurgen Krasser. “HyperMoVal: Interactive visual validation of regression models for real-time simulation,” 2010.</span></p>
+</section>
+
+<section id="sliceplorer-views" class="slide level2">
+<h2>Sliceplorer views</h2>
+<div class="columns">
+<div class="column">
+<figure>
+<img style="height: 170px" src="images/sp1.png" />
+<figcaption>Single layer NN (26 nodes)</figcaption>
+</figure>
+<figure>
+<img style="height: 170px" src="images/sp2.png" />
+<figcaption>SVM (polynomial kernel)</figcaption>
+</figure>
+</div>
+<div class="column">
+<figure>
+<img style="height: 170px" src="images/sp3.png" />
+<figcaption>Dual layer NN (5 and 3 nodes)</figcaption>
+</figure>
+<figure>
+<img style="height: 170px" src="images/sp4.png" />
+<figcaption>SVM (RBF kernel)</figcaption>
+</figure>
+</div>
+</div>
+<p><span class="citation" data-cites="Torsney-Weir:2017">Torsney-Weir, Thomas, Michael Sedlmair, and Torsten Möller. “Sliceplorer,” 2017.</span></p>
+</section>
+
+<section id="tuner-error-views" class="slide level2">
+<h2>Tuner error views</h2>
+<p>Examining multi-dimensional functions</p>
+<ul>
+<li>error view shows where model is unsure</li>
+<li>can visually verify the model</li>
+</ul>
+<div class="columns">
+<div class="column">
+  <h3>Prediction</h3>
+  <figure>
+    <img src="images/error_view.png" alt="Error view" />
+    <figcaption>Error view</figcaption>
+  </figure>
+</div>
+<div class="column">
+  <h3>Optimization</h3>
+  <figure>
+    <img src="images/gain_view.png" alt="Error view" />
+    <figcaption>Error view</figcaption>
+  </figure>
+</div>
+</div>
+</section><section id="validating-and-verifying-models-1" class="slide level2">
+<h2>Validating and verifying models</h2>
+<ul>
+<li>Summary statistics are not always enough</li>
+<li>Balancing multiple objectives is difficult</li>
+<li>Certain training points might be very important</li>
+</ul>
+<aside class="notes">
+Conclude
+</aside>
+</section></section>
+<section>
+
+<section id="understanding-models" class="titleslide slide level1 center">
+  <h1>Understanding models</h1>
+</section>
+
+<section id="who-needs-this" class="slide level2">
+<h2>Who needs this?</h2>
+<ul>
+<li>models are complex</li>
+<li>the business world likes spreadsheets because they can walk through the calculations</li>
+</ul>
+</section><section id="simple-vs-complex-models" class="slide level2">
+<h2>Simple vs complex models</h2>
+<div class="columns">
+<div class="column">
+  <h3>Simple</h3>
+  <ul>
+    <li>small integer factor</li>
+    <li>small number of facto</li>
+    <li>low-depth trees</li>
+  </ul>
+</div>
+<div class="column">
+  <h3>Complex</h3>
+  <ul>
+    <li>multi-layer neural network</li>
+    <li>gaussian process model</li>
+    <li>tSNE</li>
+    <li>non-linear</li>
+    <li>many decisions</li>
+  </ul>
+</div>
+</div>
+<aside class="notes">
+Think about tutorials, etc to learn complex systems. These complex ML algorithms are trying to replicate these systems in some sense
+</aside>
+</section>
+
+<section id="what-does-complexity-buy-us" class="slide level2">
+<h2>What does complexity buy us?</h2>
+<ul>
+<li>Global vs local models</li>
+<li>Deep-learning networks can deal with feature selection</li>
+<li>Can deal with edge cases</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>ask the students what is the simplest classifier they can think of</li>
+<li>simplest classifier: pick the most frequent class</li>
+</ul>
+</aside>
+</section><section id="methods" class="slide level2">
+<h2>Methods</h2>
+<ul>
+<li>interaction</li>
+<li>walkthroughs</li>
+<li>simpler models ala LIME (Ribeiro et al. 2016)</li>
+<li>direct inspection</li>
+</ul>
+</section><section id="examples-1" class="slide level2">
+<h2>Examples</h2>
+<ul>
+<li>regression: Muhlbacher and Piringer</li>
+<li>clustering: Dis-function</li>
+<li>text processing: TagRefinery</li>
+<li>smaller models: Explanation explorer</li>
+</ul>
+</section><section id="a-partition-based-framework-for-building-and-validating-regression-models" class="slide level2">
+<h2>Mühlbacher and Piringer</h2>
+<p>Directly interact with the model building process</p>
+<figure>
+<img src="images/muhlbacher2013.png" />
+</figure>
+<p><span class="citation" data-cites="Muhlbacher:2013">Mühlbacher, Thomas, and Harald Piringer. “A partition-based framework for building and validating regression models,” 2013. Best Paper Award.</span></p>
+</section><section id="dis-function" class="slide level2">
+<h2>Dis-function</h2>
+<p>Build a distance function interactively</p>
+<figure>
+<img src="images/brown2012.png" />
+</figure>
+<p><span class="citation" data-cites="Brown:2012">Brown, Eli T, Jingjing Liu, Carla E Brodley, and Remco Chang. “Dis-Function: Learning Distance Functions Interactively,” 2012.</span></p>
+</section><section id="tagrefinery" class="slide level2">
+<h2>TagRefinery</h2>
+<p>Tutorial/walkthrough system</p>
+<figure>
+<img src="images/tagrefinery_pipeline.png" alt="Text processing pipeline" /><figcaption>Text processing pipeline</figcaption>
+</figure>
+<p><span class="citation" data-cites="Kralj:2017">Kralj, Christoph, Mohsen Kamalzadeh, and Torsten Möller. “TagRefinery: A visual tool for tag wrangling,” 2017.</span></p>
+<aside class="notes">
+Popular in video games
+</aside>
+</section><section id="tagrefinery-1" class="slide level2">
+<h2>TagRefinery</h2>
+<figure>
+<img src="images/tagrefinery_interface.png" />
+</figure>
+<p><span class="citation" data-cites="Kralj:2017">Kralj, Christoph, Mohsen Kamalzadeh, and Torsten Möller. “TagRefinery: A visual tool for tag wrangling,” 2017.</span></p>
+</section><section id="tagrefinery-2" class="slide level2">
+<h2>TagRefinery</h2>
+<figure>
+<img src="images/tagrefinery_interface2.png" />
+</figure>
+<p><span class="citation" data-cites="Kralj:2017">Kralj, Christoph, Mohsen Kamalzadeh, and Torsten Möller. “TagRefinery: A visual tool for tag wrangling,” 2017.</span></p>
+</section>
+
+<section id="lime-method" class="slide level2">
+<h2>LIME method</h2>
+<figure>
+<img src="images/lime1.png" />
+</figure>
+  <figure class="fragment">
+<img src="images/lime2.png" />
+</figure>
+<p><span class="citation" data-cites="Ribeiro:2016a">Ribeiro, Marco Tulio, Sameer Singh, and Carlos Guestrin. “‘Why should I trust you?’: Explaining the predictions of any classifier,” 2016.</span></p>
+</section>
+
+<section id="explanation-explorer" class="slide level2">
+<h2>Explanation explorer</h2>
+<figure>
+<img src="images/krause2017.png" />
+</figure>
+<p><span class="citation" data-cites="Krause:2017">Krause, Josua, Aritra Dasgupta, Jordan Swartz, Yindalon Aphinyanaphongs, and Enrico Bertini. “A workflow for visual diagnostics of binary classifiers using instance-level explanations,” 2017.</span></p>
+</section><section id="direct-inspection" class="slide level2">
+<h2>Direct inspection</h2>
+<p>e.g. hidden states in a neural network</p>
+<figure>
+<img src="images/nn.jpg" />
+</figure>
+</section>
+
+<section id="lstmvis" class="slide level2">
+<h2>LSTMVis</h2>
+<figure>
+<img src="images/lstmvis_interface.png" />
+</figure>
+<p><span class="citation" data-cites="Strobelt:2018">Strobelt, Hendrik, Sebastian Gehrmann, Hanspeter Pfister, and Alexander M. Rush. “LSTMVis: A tool for visual analysis of hidden state dynamics in recurrent neural networks,” 2018.</span></p>
+</section>
+
+<section id="lstmvis-1" class="slide level2">
+<h2>LSTMVis</h2>
+<figure>
+<img src="images/lstmvis_detail.png" />
+</figure>
+<p><span class="citation" data-cites="Strobelt:2018">Strobelt, Hendrik, Sebastian Gehrmann, Hanspeter Pfister, and Alexander M. Rush. “LSTMVis: A tool for visual analysis of hidden state dynamics in recurrent neural networks,” 2018.</span></p>
+</section>
+
+<section id="deepeyes" class="slide level2">
+<h2>DeepEyes</h2>
+<figure>
+<img src="images/deepeyes_interface.png" />
+</figure>
+<p><span class="citation" data-cites="Pezzotti:2018">Pezzotti, Nicola, Thomas Höllt, Jan van Gemert, Boudewijn Lelieveldt, Elmar Eisemann, and Anna Vilanova. “DeepEyes: Progressive visual analytics for designing deep neural networks,” 2018.</span></p>
+</section><section id="deepeyes-1" class="slide level2">
+<h2>DeepEyes</h2>
+<figure>
+<img src="images/deepeyes_detail.png" />
+</figure>
+<p><span class="citation" data-cites="Pezzotti:2018">Pezzotti, Nicola, Thomas Höllt, Jan van Gemert, Boudewijn Lelieveldt, Elmar Eisemann, and Anna Vilanova. “DeepEyes: Progressive visual analytics for designing deep neural networks,” 2018.</span></p>
+</section></section>
+<section>
+  
+<section id="machine-learning-helping-vis" class="titleslide slide level1 center">
+  <h1>Machine learning helping vis</h1>
+</section>
+
+<section id="how" class="slide level2">
+<h2>How?</h2>
+<figure>
+<img src="images/sacha2014.png" />
+</figure>
+<p><span class="citation" data-cites="Sacha:2014">Sacha, D., A. Stoffel, F. Stoffel, Bum Chul Kwon, G. Ellis, and Daniel A Keim. “Knowledge generation model for visual analytics,” 2014.</span></p>
+<ul>
+<li>Use the strengths of ML and vis together
+<ul>
+<li>machines are good at calculating</li>
+<li>humans are good at intuition</li>
+</ul></li>
+<li>Vis assisted by ML algorithms</li>
+</ul>
+</section><section id="book-ad" class="slide level2">
+<h2>Book ad!</h2>
+<figure>
+<img src="images/accelerando.jpg" />
+</figure>
+</section><section id="clustering-6" class="slide level2">
+<h2>Clustering</h2>
+<ul>
+<li>Cluster and calendar view</li>
+<li>KeyVis</li>
+<li>FluidExplorer</li>
+</ul>
+<aside class="notes">
+Clustering is used alot to group elements before visual inspection
+</aside>
+</section><section id="cluster-and-calendar-view" class="slide level2">
+<h2>Cluster and calendar view</h2>
+<figure>
+<img src="images/wijk1999_1.png" />
+</figure>
+<p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
+</section><section id="cluster-and-calendar-view-1" class="slide level2">
+<h2>Cluster and calendar view</h2>
+<figure>
+<img src="images/wijk1999_2.png" />
+</figure>
+<p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
+</section><section id="cluster-and-calendar-view-2" class="slide level2">
+<h2>Cluster and calendar view</h2>
+<figure>
+<img src="images/wijk1999_3.png" />
+</figure>
+<p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
+</section><section id="keyvis" class="slide level2">
+<h2>KeyVis</h2>
+<p>step 1: cluster the papers based on keywords</p>
+<p><img src="images/keyvis_clustering.png" /> <span class="citation" data-cites="Isenberg:2017">Isenberg, Petra, Tobias Isenberg, Michael Sedlmair, Jian Chen, and Torsten Möller. “Visualization as seen through its research paper keywords,” 2017. <a href="https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST" class="uri">https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST</a>.</span></p>
+<aside class="notes">
+Goal is to find relevant papers
+</aside>
+</section><section id="keyvis-1" class="slide level2">
+<h2>KeyVis</h2>
+<p>step 2: give an interface to this clustering</p>
+<p><img src="images/keyvis_interface.png" /> <span class="citation" data-cites="Isenberg:2017">Isenberg, Petra, Tobias Isenberg, Michael Sedlmair, Jian Chen, and Torsten Möller. “Visualization as seen through its research paper keywords,” 2017. <a href="https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST" class="uri">https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST</a>.</span></p>
+</section><section id="fluidexplorer" class="slide level2">
+<h2>FluidExplorer</h2>
+<figure>
+<img src="images/fluidexplorer_pipeline.png" />
+</figure>
+<p><span class="citation" data-cites="Bruckner:2010">Bruckner, Stefan, and Torsten Möller. “Result-driven exploration of simulation parameter spaces for visual effects design,” 2010. <a href="http://www.ncbi.nlm.nih.gov/pubmed/20975188" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/20975188</a>.</span></p>
+<aside class="notes">
+Goal is to find good flame simulations. This is hard even for experts!
+</aside>
+</section><section id="fluidexplorer-1" class="slide level2">
+<h2>FluidExplorer</h2>
+<figure>
+<img src="images/fluidexplorer_interface.png" />
+</figure>
+<p><span class="citation" data-cites="Bruckner:2010">Bruckner, Stefan, and Torsten Möller. “Result-driven exploration of simulation parameter spaces for visual effects design,” 2010. <a href="http://www.ncbi.nlm.nih.gov/pubmed/20975188" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/20975188</a>.</span></p>
+</section><section id="fluidexplorer-2" class="slide level2">
+<h2>FluidExplorer</h2>
+<figure>
+<img src="images/fluidexplorer_clustering.png" />
+</figure>
+<p><span class="citation" data-cites="Bruckner:2010">Bruckner, Stefan, and Torsten Möller. “Result-driven exploration of simulation parameter spaces for visual effects design,” 2010. <a href="http://www.ncbi.nlm.nih.gov/pubmed/20975188" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/20975188</a>.</span></p>
+</section><section id="classification-1" class="slide level2">
+<h2>Classification</h2>
+<figure>
+<img src="images/brochu2010.png" />
+</figure>
+<p><span class="citation" data-cites="Brochu:2010">Brochu, Eric, Tyson Brochu, and Nando de Freitas. “A Bayesian interactive optimization approach to procedural animation design,” 2010. <a href="http://portal.acm.org/citation.cfm?id=1921443" class="uri">http://portal.acm.org/citation.cfm?id=1921443</a>.</span></p>
+<aside class="notes">
+Same idea, different implementation. Goal is to find good flame simulations. This is hard even for experts!
+</aside>
+</section><section id="understanding-models-1" class="slide level2">
+<h2>Understanding models</h2>
+<ul>
+<li>Just an answer is not enough (show your work)</li>
+<li>Humans have trouble understanding complex models</li>
+<li>Interactivity can bring people into the model</li>
+</ul>
+</section></section>
+<section>
+  
+<section id="the-future" class="titleslide slide level1 center">
+  <h1>The future!</h1>
+</section>
+
+<section id="interesting-projects" class="slide level2">
+<h2>Interesting projects</h2>
+<ul>
+<li>More using ML to build models for vis tools</li>
+<li>More generalized tools</li>
+<li>Understand what &quot;understandability&quot; means</li>
+</ul>
+<aside class="notes">
+<p>Active learning Humans: intuition, computers: data processing</p>
+<p>Many tools are specific to a type of model</p>
+Understandability is only asserted
+</aside>
+</section><section id="thanks" class="slide level2">
+<h2>Thanks!</h2>
+<p>thomas.torsney-weir@univie.ac.at</p>
+<p>http://www.tomtorsneyweir.com</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+        transition: 'none',
+        center: false,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
