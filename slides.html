@@ -42,14 +42,16 @@
 <li>Machine learning helping vis</li>
 </ul>
 </section>
+
 <section id="what-is-machine-learning" class="slide level2">
 <h2>What is machine learning?</h2>
 <blockquote>
 <p>&quot;A rational agent is one that acts so as to achieve the best outcome or, when there is uncertainty, the best expected outcome&quot;</p>
 </blockquote>
 <p><span class="citation" data-cites="Russell:2009">Russell, Stuart, and Peter Norvig. <em>Artificial intelligence: A modern approach</em>, 2009.</span></p>
-<p>Algorithms that can improve their performance based on training data</p>
+<p class="fragment">Algorithms that can improve their performance based on training data</p>
 </section>
+
 <section id="what-is-machine-learning-1" class="slide level2">
 <h2>What is machine learning?</h2>
 <figure>
@@ -328,6 +330,15 @@ P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
 </section>
 
 <section id="what-are-meta-parameters" class="slide level2">
+<h2>Building models</h2>
+
+<ul>
+<li>Meta parameters</li>
+<li>Parameter selection</li>
+</ul>
+</section>
+
+<section id="what-are-meta-parameters" class="slide level2">
 <h2>What are meta parameters?</h2>
 <p>Meta parameters control how learning takes place</p>
 <ul>
@@ -437,7 +448,7 @@ Works well when you have no real metric for what you're looking for
 </section>
 
 <section id="real-time-parameter-tuning" class="slide level2">
-<h2>Real-time parameter tuning</h2>
+<h2>Real-time parameter selection</h2>
 <figure>
 <img src="images/lindhart.png" />
 </figure>
@@ -564,14 +575,16 @@ Conclude
 <li>models are complex</li>
 <li>the business world likes spreadsheets because they can walk through the calculations</li>
 </ul>
-</section><section id="simple-vs-complex-models" class="slide level2">
+</section>
+
+<section id="simple-vs-complex-models" class="slide level2">
 <h2>Simple vs complex models</h2>
 <div class="columns">
 <div class="column">
   <h3>Simple</h3>
   <ul>
-    <li>small integer factor</li>
-    <li>small number of facto</li>
+    <li>few factors</li>
+    <li>small integer factors</li>
     <li>low-depth trees</li>
   </ul>
 </div>
@@ -579,8 +592,7 @@ Conclude
   <h3>Complex</h3>
   <ul>
     <li>multi-layer neural network</li>
-    <li>gaussian process model</li>
-    <li>tSNE</li>
+    <li>Gaussian process model</li>
     <li>non-linear</li>
     <li>many decisions</li>
   </ul>
@@ -588,6 +600,8 @@ Conclude
 </div>
 <aside class="notes">
 Think about tutorials, etc to learn complex systems. These complex ML algorithms are trying to replicate these systems in some sense
+
+Deep trees have issues like being given tons of rules
 </aside>
 </section>
 
@@ -689,6 +703,12 @@ Popular in video games
 <img src="images/lstmvis_interface.png" />
 </figure>
 <p><span class="citation" data-cites="Strobelt:2018">Strobelt, Hendrik, Sebastian Gehrmann, Hanspeter Pfister, and Alexander M. Rush. “LSTMVis: A tool for visual analysis of hidden state dynamics in recurrent neural networks,” 2018.</span></p>
+
+<aside class="notes">
+  Long short-term memory networks (LSTM) - recurrent
+
+  Time-dependent vis (in this case of a stream of text)
+</aside>
 </section>
 
 <section id="lstmvis-1" class="slide level2">
@@ -697,6 +717,9 @@ Popular in video games
 <img src="images/lstmvis_detail.png" />
 </figure>
 <p><span class="citation" data-cites="Strobelt:2018">Strobelt, Hendrik, Sebastian Gehrmann, Hanspeter Pfister, and Alexander M. Rush. “LSTMVis: A tool for visual analysis of hidden state dynamics in recurrent neural networks,” 2018.</span></p>
+
+<aside class="notes">
+</aside>
 </section>
 
 <section id="deepeyes" class="slide level2">
@@ -705,13 +728,25 @@ Popular in video games
 <img src="images/deepeyes_interface.png" />
 </figure>
 <p><span class="citation" data-cites="Pezzotti:2018">Pezzotti, Nicola, Thomas Höllt, Jan van Gemert, Boudewijn Lelieveldt, Elmar Eisemann, and Anna Vilanova. “DeepEyes: Progressive visual analytics for designing deep neural networks,” 2018.</span></p>
-</section><section id="deepeyes-1" class="slide level2">
+
+<aside class="notes">
+Fig. 1. DeepEyes is a Progressive Visual Analytics system for the analysis of deep neural networks during training. The overview
+on the training is given by the commonly used loss- and accuracy-curves (a) and the Perplexity Histograms (b) a novel visualization
+that allows the detection of stable layers. A detailed analysis per layer is performed in three tightly linked visualizations. Degenerated
+filters are detected in the Activation Heatmap (c), and filter activations are visualized on the Input Map (d). Finally, in the Filter Map (e),
+relationships among the filters in a layer are visualized.
+</aside>
+</section>
+
+<section id="deepeyes-1" class="slide level2">
 <h2>DeepEyes</h2>
 <figure>
 <img src="images/deepeyes_detail.png" />
 </figure>
 <p><span class="citation" data-cites="Pezzotti:2018">Pezzotti, Nicola, Thomas Höllt, Jan van Gemert, Boudewijn Lelieveldt, Elmar Eisemann, and Anna Vilanova. “DeepEyes: Progressive visual analytics for designing deep neural networks,” 2018.</span></p>
-</section></section>
+</section>
+
+</section>
 <section>
   
 <section id="machine-learning-helping-vis" class="titleslide slide level1 center">
