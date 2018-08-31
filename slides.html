@@ -43,6 +43,8 @@
 </ul>
 </section>
 
+<section>
+
 <section id="what-is-machine-learning" class="slide level2">
 <h2>What is machine learning?</h2>
 <blockquote>
@@ -177,6 +179,7 @@ People often confuse clustering as classification where they don't know the clas
 Discrete values are also called classes
 </aside>
 </section>
+
 <section id="clustering" class="slide level2">
 <h2>Clustering</h2>
 <p>Find distributions</p>
@@ -185,6 +188,7 @@ Discrete values are also called classes
 </figure>
 <p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
 </section>
+
 <section id="clustering-1" class="slide level2">
 <h2>Clustering</h2>
 <p>Find distributions</p>
@@ -193,6 +197,7 @@ Discrete values are also called classes
 </figure>
 <p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
 </section>
+
 <section id="clustering-2" class="slide level2">
 <h2>Clustering</h2>
 <p>Find distributions</p>
@@ -201,6 +206,7 @@ Discrete values are also called classes
 </figure>
 <p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
 </section>
+
 <section id="clustering-3" class="slide level2">
 <h2>Clustering</h2>
 <p>Find distributions</p>
@@ -209,6 +215,7 @@ Discrete values are also called classes
 </figure>
 <p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
 </section>
+
 <section id="clustering-4" class="slide level2">
 <h2>Clustering</h2>
 <p>Find distributions</p>
@@ -217,6 +224,7 @@ Discrete values are also called classes
 </figure>
 <p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
 </section>
+
 <section id="clustering-5" class="slide level2">
 <h2>Clustering</h2>
 <p>Find distributions</p>
@@ -225,6 +233,7 @@ Discrete values are also called classes
 </figure>
 <p><span class="citation" data-cites="Bishop:2006">Bishop, Christopher M. <em>Pattern recognition and machine learning (information science and statistics)</em>, 2006.</span></p>
 </section>
+
 <section id="types-of-ml-algorithms" class="slide level2">
 <h2>Types of ML algorithms</h2>
 <ul>
@@ -233,6 +242,7 @@ Discrete values are also called classes
 <li>Clustering: Find distributions</li>
 </ul>
 </section>
+
 <section id="uses" class="slide level2">
 <h2>Uses</h2>
 <ul>
@@ -242,6 +252,7 @@ Discrete values are also called classes
 <li>HMM: speech recognition</li>
 </ul>
 </section>
+
 <section id="email-filtering" class="slide level2">
 <h2>Email filtering</h2>
 <ul>
@@ -286,6 +297,10 @@ P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
 </p>
 </section>
 
+</section> <!-- end of ML intro -->
+
+<section>
+
 <section id="vis-and-ml" class="slide level2">
 <h2>Vis and ML</h2>
 <p>both vis and ML seem to have similar goals: make sense of complex data</p>
@@ -307,7 +322,7 @@ P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
 </div>
 </section>
 
-<section id="who-helps-whom" class="slide level2">
+<section id="who-helps-whom-2" class="slide level2">
 <h2>Who helps whom?</h2>
 <h3 id="both">both!</h3>
 <ul>
@@ -315,18 +330,26 @@ P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
 <li>ML helps vis: ML for embedded analysis</li>
 </ul>
 </section>
+
+</section>
+
+<section>
+
+<section id="building-models" class="titleslide slide level1 center">
+<h1>Vis helping ML</h1>
+</section>
+
+  
 <section id="now-to-the-vis-part" class="slide level2">
-<h2>Now to the vis part</h2>
+<h2>Vis helping ML</h2>
 <p>How do they work together?</p>
 <ul>
 <li>Building models</li>
 <li>Validating models</li>
 <li>Understanding models</li>
-<li>Embedding ML algorithms</li>
 </ul>
 </section>
-<section>
-  
+
 <section id="building-models" class="titleslide slide level1 center">
 <h1>Building models</h1>
 </section>
@@ -336,8 +359,13 @@ P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
 
 <ul>
 <li>Meta parameters</li>
-<li>Parameter selection</li>
+<li>Model selection</li>
 </ul>
+
+<aside class="notes">
+Meta parameters control an individual learning algorithm, model selection 
+is which model is best across algorithms
+</aside>
 </section>
 
 <section id="what-are-meta-parameters" class="slide level2">
@@ -386,11 +414,17 @@ Same algo different params
 <figure>
 <img src="images/2d_sampling_1.svg" />
 </figure>
-</section><section id="manual-method-1" class="slide level2">
+</section>
+
+<section id="manual-method-1" class="slide level2">
 <h2>Manual method</h2>
 <figure>
 <img src="images/2d_sampling_2.svg" />
 </figure>
+
+<aside class="notes">
+  Known as "grad student descent"
+</aside>
 </section>
 
 <section id="how-to-study-them" class="slide level2">
@@ -403,33 +437,45 @@ Same algo different params
 <aside class="notes">
 Works well when you have no real metric for what you're looking for
 </aside>
-</section><section id="design-galleries" class="slide level2">
+</section>
+
+<section id="design-galleries" class="slide level2">
 <h2>Design galleries</h2>
 <figure>
 <img src="images/design_galleries_1.png" />
 </figure>
 <p><span class="citation" data-cites="Marks:1997">Marks, Joe, Brad Andalman, Paul A. Beardsley, William Freeman, Sarah Gibson, Jessica Hodgins, Thomas Kang, et al. “Design Galleries: A general approach to setting parameters for computer graphics and animation,” 1997.</span></p>
-</section><section id="design-galleries-1" class="slide level2">
+</section>
+
+<section id="design-galleries-1" class="slide level2">
 <h2>Design galleries</h2>
 <figure>
 <img src="images/design_galleries_2.png" />
 </figure>
 <p><span class="citation" data-cites="Marks:1997">Marks, Joe, Brad Andalman, Paul A. Beardsley, William Freeman, Sarah Gibson, Jessica Hodgins, Thomas Kang, et al. “Design Galleries: A general approach to setting parameters for computer graphics and animation,” 1997.</span></p>
-</section><section id="paramorama" class="slide level2">
+</section>
+
+<section id="paramorama" class="slide level2">
 <h2>Paramorama</h2>
 <figure>
 <img src="images/paramorama_interface.png" />
 </figure>
 <p><span class="citation" data-cites="Pretorius:2011">Pretorius, A. Johannes, Mark-Anthony P. Bray, Anne E. Carpenter, and Roy A. Ruddle. “Visualization of parameter space for image analysis,” 2011.</span></p>
-</section><section id="how-to-study-them-1" class="slide level2">
+</section>
+
+<section id="how-to-study-them-1" class="slide level2">
 <h2>How to study them?</h2>
 <p>use a more principled approach</p>
-</section><section id="objective-measures" class="slide level2">
+</section>
+
+<section id="objective-measures" class="slide level2">
 <h2>Objective measures</h2>
 <figure>
 <img src="images/obj_measures.svg" />
 </figure>
-</section><section id="visual-parameter-space-exploration" class="slide level2">
+</section>
+
+<section id="visual-parameter-space-exploration" class="slide level2">
 <h2>Visual parameter space exploration</h2>
 <ul>
 <li>intro</li>
@@ -441,7 +487,9 @@ Works well when you have no real metric for what you're looking for
 <p>
 <span class="citation" data-cites="Sedlmair:2014"> Michael Sedlmair, Christoph Heinzl, Stefan Bruckner, Harald Piringer, and Torsten Möller &quot;Visual parameter space analysis: A conceptual framework&quot; IEEE Transactions on Visualization and Computer Graphics. 20(12) 2014. </span>
 </p>
-</section><section id="tuner" class="slide level2">
+</section>
+
+<section id="tuner" class="slide level2">
 <h2>Tuner</h2>
 <figure>
 <img src="images/tuner_pipeline.svg" alt="image segmentation pipeline" />
@@ -489,6 +537,15 @@ CS people love algorithms but params are important
 </figure>
 </section>
 
+<section id="validating-and-verifying-models-1" class="slide level2">
+<h2>Validating and verifying models</h2>
+<ul>
+<li>Summary statistics are not always enough</li>
+<li>Balancing multiple objectives is difficult</li>
+<li>Certain training points might be very important</li>
+</ul>
+</section>
+
 <section id="examples" class="slide level2">
 <h2>Examples</h2>
 <ul>
@@ -496,7 +553,9 @@ CS people love algorithms but params are important
 <li>Sliceplorer - global inspection</li>
 <li>Tuner - error inspection</li>
 </ul>
-</section><section id="hypermoval" class="slide level2">
+</section>
+
+<section id="hypermoval" class="slide level2">
 <h2>HyperMoVal</h2>
 <figure>
 <img src="images/hypermoval_interface.png" />
@@ -554,21 +613,18 @@ CS people love algorithms but params are important
   </figure>
 </div>
 </div>
-</section><section id="validating-and-verifying-models-1" class="slide level2">
-<h2>Validating and verifying models</h2>
-<ul>
-<li>Summary statistics are not always enough</li>
-<li>Balancing multiple objectives is difficult</li>
-<li>Certain training points might be very important</li>
-</ul>
-<aside class="notes">
-Conclude
-</aside>
-</section></section>
+</section>
+
+</section>
+
 <section>
 
 <section id="understanding-models" class="titleslide slide level1 center">
   <h1>Understanding models</h1>
+
+<aside class="notes">
+Transition
+</aside>
 </section>
 
 <section id="who-needs-this" class="slide level2">
@@ -620,7 +676,18 @@ Deep trees have issues like being given tons of rules
 <li>simplest classifier: pick the most frequent class</li>
 </ul>
 </aside>
-</section><section id="methods" class="slide level2">
+</section>
+
+<section id="understanding-models-1" class="slide level2">
+<h2>Understanding models</h2>
+<ul>
+<li>Just an answer is not enough (show your work)</li>
+<li>Humans have trouble understanding complex models</li>
+<li>Interactivity can bring people into the model</li>
+</ul>
+</section>
+
+<section id="methods" class="slide level2">
 <h2>Methods</h2>
 <ul>
 <li>interaction</li>
@@ -628,7 +695,9 @@ Deep trees have issues like being given tons of rules
 <li>simpler models ala LIME (Ribeiro et al. 2016)</li>
 <li>direct inspection</li>
 </ul>
-</section><section id="examples-1" class="slide level2">
+</section>
+
+<section id="examples-1" class="slide level2">
 <h2>Examples</h2>
 <ul>
 <li>regression: Muhlbacher and Piringer</li>
@@ -636,21 +705,27 @@ Deep trees have issues like being given tons of rules
 <li>text processing: TagRefinery</li>
 <li>smaller models: Explanation explorer</li>
 </ul>
-</section><section id="a-partition-based-framework-for-building-and-validating-regression-models" class="slide level2">
+</section>
+
+<section id="a-partition-based-framework-for-building-and-validating-regression-models" class="slide level2">
 <h2>Mühlbacher and Piringer</h2>
 <p>Directly interact with the model building process</p>
 <figure>
 <img src="images/muhlbacher2013.png" />
 </figure>
 <p><span class="citation" data-cites="Muhlbacher:2013">Mühlbacher, Thomas, and Harald Piringer. “A partition-based framework for building and validating regression models,” 2013. Best Paper Award.</span></p>
-</section><section id="dis-function" class="slide level2">
+</section>
+
+<section id="dis-function" class="slide level2">
 <h2>Dis-function</h2>
 <p>Build a distance function interactively</p>
 <figure>
 <img src="images/brown2012.png" />
 </figure>
 <p><span class="citation" data-cites="Brown:2012">Brown, Eli T, Jingjing Liu, Carla E Brodley, and Remco Chang. “Dis-Function: Learning Distance Functions Interactively,” 2012.</span></p>
-</section><section id="tagrefinery" class="slide level2">
+</section>
+
+<section id="tagrefinery" class="slide level2">
 <h2>TagRefinery</h2>
 <p>Tutorial/walkthrough system</p>
 <figure>
@@ -660,13 +735,17 @@ Deep trees have issues like being given tons of rules
 <aside class="notes">
 Popular in video games
 </aside>
-</section><section id="tagrefinery-1" class="slide level2">
+</section>
+
+<section id="tagrefinery-1" class="slide level2">
 <h2>TagRefinery</h2>
 <figure>
 <img src="images/tagrefinery_interface.png" />
 </figure>
 <p><span class="citation" data-cites="Kralj:2017">Kralj, Christoph, Mohsen Kamalzadeh, and Torsten Möller. “TagRefinery: A visual tool for tag wrangling,” 2017.</span></p>
-</section><section id="tagrefinery-2" class="slide level2">
+</section>
+
+<section id="tagrefinery-2" class="slide level2">
 <h2>TagRefinery</h2>
 <figure>
 <img src="images/tagrefinery_interface2.png" />
@@ -691,7 +770,9 @@ Popular in video games
 <img src="images/krause2017.png" />
 </figure>
 <p><span class="citation" data-cites="Krause:2017">Krause, Josua, Aritra Dasgupta, Jordan Swartz, Yindalon Aphinyanaphongs, and Enrico Bertini. “A workflow for visual diagnostics of binary classifiers using instance-level explanations,” 2017.</span></p>
-</section><section id="direct-inspection" class="slide level2">
+</section>
+
+<section id="direct-inspection" class="slide level2">
 <h2>Direct inspection</h2>
 <p>e.g. hidden states in a neural network</p>
 <figure>
@@ -749,18 +830,30 @@ relationships among the filters in a layer are visualized.
 </section>
 
 </section>
+
+<section id="now-to-the-vis-part-2" class="slide level2">
+<h2>Vis helping ML</h2>
+<p>How do they work together?</p>
+<ul>
+<li>Building models</li>
+<li>Validating models</li>
+<li>Understanding models</li>
+</ul>
+
+<p>What about the other way?</p>
+
+<aside class="notes">
+so that was vis helpig ML, let's turn to the other side of the coin
+</aside>
+</section>
+
 <section>
-  
 <section id="machine-learning-helping-vis" class="titleslide slide level1 center">
   <h1>Machine learning helping vis</h1>
 </section>
 
 <section id="how" class="slide level2">
 <h2>How?</h2>
-<figure>
-<img src="images/sacha2014.png" />
-</figure>
-<p><span class="citation" data-cites="Sacha:2014">Sacha, D., A. Stoffel, F. Stoffel, Bum Chul Kwon, G. Ellis, and Daniel A Keim. “Knowledge generation model for visual analytics,” 2014.</span></p>
 <ul>
 <li>Use the strengths of ML and vis together
 <ul>
@@ -769,51 +862,163 @@ relationships among the filters in a layer are visualized.
 </ul></li>
 <li>Vis assisted by ML algorithms</li>
 </ul>
-</section><section id="book-ad" class="slide level2">
+<figure>
+<img src="images/sacha2014.png" />
+</figure>
+<p><span class="citation" data-cites="Sacha:2014">Sacha, D., A. Stoffel, F. Stoffel, Bum Chul Kwon, G. Ellis, and Daniel A Keim. “Knowledge generation model for visual analytics,” 2014.</span></p>
+
+</section>
+
+<section id="book-ad" class="slide level2">
 <h2>Book ad!</h2>
 <figure>
 <img src="images/accelerando.jpg" />
 </figure>
-</section><section id="clustering-6" class="slide level2">
-<h2>Clustering</h2>
+</section>
+
+<section class="slide level2">
+<h2>How?</h2>
+<figure>
+<img src="images/sacha2014.png" />
+</figure>
 <ul>
-<li>Cluster and calendar view</li>
-<li>KeyVis</li>
-<li>FluidExplorer</li>
+<li>ML provides data aggregation/filtering/selection</li>
+<li>User can steer algo to produce desired results</li>
+</ul>
+<aside class="notes">
+* So the idea is that the user is interacting with the visualization 
+* puffy cloud is the computer
+* human has 3 different loops, exploration, verification, knowledge generation
+* "model" in the figure is the ML algorithm
+* "knowledge" is good! we like that
+</aside>
+</section>
+
+<section id="clustering-6" class="slide level2">
+<h2>Examples</h2>
+<ul>
+<li>Cluster and calendar view - clustering</li>
+<li>KeyVis - clustering</li>
+<li>FluidExplorer - clustering</li>
+<li>Cell Cognition Explorer - active learning</li>
 </ul>
 <aside class="notes">
 Clustering is used alot to group elements before visual inspection
 </aside>
-</section><section id="cluster-and-calendar-view" class="slide level2">
+</section>
+
+<section id="ccv-intro" class="slide level2">
+<h2>Cluster and calendar view</h2>
+<p>Understanding power consumption</p>
+<ul>
+  <li>When do people use the most power?</li>
+  <li>What are seaonal patterns?</li>
+  <li>How does energy use change at different scales
+    <ul>
+      <li>Days</li>
+      <li>Weeks</li>
+      <li>Months</li>
+    </ul>
+  </li>
+</ul>
+</section>
+
+<section id="cluster-and-calendar-view" class="slide level2">
 <h2>Cluster and calendar view</h2>
 <figure>
 <img src="images/wijk1999_1.png" />
 </figure>
 <p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
-</section><section id="cluster-and-calendar-view-1" class="slide level2">
-<h2>Cluster and calendar view</h2>
-<figure>
-<img src="images/wijk1999_2.png" />
-</figure>
-<p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
-</section><section id="cluster-and-calendar-view-2" class="slide level2">
+<aside class="notes">
+  This is sort of the "pure" vis way of looking at things. What are issues?
+</aside>
+</section>
+
+<section id="cluster-and-calendar-view-2" class="slide level2">
 <h2>Cluster and calendar view</h2>
 <figure>
 <img src="images/wijk1999_3.png" />
 </figure>
 <p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
-</section><section id="keyvis" class="slide level2">
+
+<aside class="notes">
+  So this would be a better view, with the familiar calendar and similar patterns highlighted. Overview and detail will be discussed later
+</aside>
+</section>
+
+<section id="cluster-and-calendar-view-1" class="slide level2">
+<h2>Cluster and calendar view</h2>
+<figure>
+<img style="height: 400px" src="images/wijk1999_2.png" />
+</figure>
+<p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
+</section>
+
+<section id="cluster-and-calendar-view-2" class="slide level2">
+<h2>Cluster and calendar view</h2>
+<figure>
+<img src="images/wijk1999_3.png" />
+</figure>
+<p><span class="citation" data-cites="Van-Wijk:1999">Van Wijk, J.J., and E.R. Van Selow. “Cluster and calendar based visualization of time series data,” 1999. <a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851" class="uri">http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=801851</a>.</span></p>
+</section>
+
+<section id="keyvis-info" class="slide level2">
+<h2>KeyVis</h2>
+<div class="columns">
+<div class="column">
+<figure>
+  <img style="height:400px" src="images/keyvis_interface.png" /> 
+</figure>
+</div>
+<div class="column">
+  <ul>
+    <li>How to find related work?</li>
+    <li>How helpful are keywords?</li>
+    <li>Do keywords relate to each other?</li>
+  </ul>
+</div>
+</div>
+<p>
+  <span class="citation" data-cites="Isenberg:2017">Isenberg, Petra, Tobias Isenberg, Michael Sedlmair, Jian Chen, and Torsten Möller. “Visualization as seen through its research paper keywords,” 2017. <a href="https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST" class="uri">https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST</a>.</span>
+</p>
+<aside class="notes">
+<p>
+Ask students if they ever tried to find related work
+</p>
+<p>
+Goal is to find relevant papers. This is really hard with filtering, searching,
+looking at word stats, etc. 
+So what to do? 
+</p>
+</aside>
+</section>
+
+<section id="keyvis" class="slide level2">
 <h2>KeyVis</h2>
 <p>step 1: cluster the papers based on keywords</p>
-<p><img src="images/keyvis_clustering.png" /> <span class="citation" data-cites="Isenberg:2017">Isenberg, Petra, Tobias Isenberg, Michael Sedlmair, Jian Chen, and Torsten Möller. “Visualization as seen through its research paper keywords,” 2017. <a href="https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST" class="uri">https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST</a>.</span></p>
+<p>
+<figure>
+<img style="height:400px;" src="images/keyvis_clustering.png" /> 
+</figure>
+<p>
+  <span class="citation" data-cites="Isenberg:2017">Isenberg, Petra, Tobias Isenberg, Michael Sedlmair, Jian Chen, and Torsten Möller. “Visualization as seen through its research paper keywords,” 2017. <a href="https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST" class="uri">https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST</a>.</span>
+</p>
 <aside class="notes">
-Goal is to find relevant papers
+So they did a hierarchical clustering of keyword
+co-occurances to find groups
 </aside>
-</section><section id="keyvis-1" class="slide level2">
+</section>
+
+<section id="keyvis-1" class="slide level2">
 <h2>KeyVis</h2>
 <p>step 2: give an interface to this clustering</p>
-<p><img src="images/keyvis_interface.png" /> <span class="citation" data-cites="Isenberg:2017">Isenberg, Petra, Tobias Isenberg, Michael Sedlmair, Jian Chen, and Torsten Möller. “Visualization as seen through its research paper keywords,” 2017. <a href="https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST" class="uri">https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST</a>.</span></p>
-</section><section id="fluidexplorer" class="slide level2">
+<figure>
+  <img style="height:400px" src="images/keyvis_interface.png" /> 
+</figure>
+<p><span class="citation" data-cites="Isenberg:2017">Isenberg, Petra, Tobias Isenberg, Michael Sedlmair, Jian Chen, and Torsten Möller. “Visualization as seen through its research paper keywords,” 2017. <a href="https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST" class="uri">https://tobias.isenberg.cc/VideosAndDemos/Isenberg2017VST</a>.</span></p>
+</section>
+
+<section id="fluidexplorer" class="slide level2">
 <h2>FluidExplorer</h2>
 <figure>
 <img src="images/fluidexplorer_pipeline.png" />
@@ -822,35 +1027,35 @@ Goal is to find relevant papers
 <aside class="notes">
 Goal is to find good flame simulations. This is hard even for experts!
 </aside>
-</section><section id="fluidexplorer-1" class="slide level2">
+</section>
+
+<section id="fluidexplorer-1" class="slide level2">
 <h2>FluidExplorer</h2>
 <figure>
 <img src="images/fluidexplorer_interface.png" />
 </figure>
 <p><span class="citation" data-cites="Bruckner:2010">Bruckner, Stefan, and Torsten Möller. “Result-driven exploration of simulation parameter spaces for visual effects design,” 2010. <a href="http://www.ncbi.nlm.nih.gov/pubmed/20975188" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/20975188</a>.</span></p>
-</section><section id="fluidexplorer-2" class="slide level2">
+</section>
+
+<section id="fluidexplorer-2" class="slide level2">
 <h2>FluidExplorer</h2>
 <figure>
 <img src="images/fluidexplorer_clustering.png" />
 </figure>
 <p><span class="citation" data-cites="Bruckner:2010">Bruckner, Stefan, and Torsten Möller. “Result-driven exploration of simulation parameter spaces for visual effects design,” 2010. <a href="http://www.ncbi.nlm.nih.gov/pubmed/20975188" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/20975188</a>.</span></p>
-</section><section id="classification-1" class="slide level2">
-<h2>Classification</h2>
+</section>
+
+<section id="cell-cognition-explorer" class="slide level2">
+<h2>Cell Cognition Explorer</h2>
 <figure>
-<img src="images/brochu2010.png" />
+  <img src="images/cellcog_explorer.png" />
 </figure>
-<p><span class="citation" data-cites="Brochu:2010">Brochu, Eric, Tyson Brochu, and Nando de Freitas. “A Bayesian interactive optimization approach to procedural animation design,” 2010. <a href="http://portal.acm.org/citation.cfm?id=1921443" class="uri">http://portal.acm.org/citation.cfm?id=1921443</a>.</span></p>
-<aside class="notes">
-Same idea, different implementation. Goal is to find good flame simulations. This is hard even for experts!
-</aside>
-</section><section id="understanding-models-1" class="slide level2">
-<h2>Understanding models</h2>
-<ul>
-<li>Just an answer is not enough (show your work)</li>
-<li>Humans have trouble understanding complex models</li>
-<li>Interactivity can bring people into the model</li>
-</ul>
-</section></section>
+<p>
+  <span class="citation" data-cites="Sommer:2017">Sommer, Christoph, Rudolf Hoefler, Matthias Samwer, and Daniel W. Gerlich. “A Deep Learning And Novelty Detection Framework For Rapid Phenotyping In High-Content Screening,” 2017. <a href="http://dx.doi.org/10.1091/mbc.E17-05-0333" class="uri">http://dx.doi.org/10.1091/mbc.E17-05-0333</a>.</span>
+</p>
+</section>
+
+</section> <!-- end of ML helping vis -->
 <section>
   
 <section id="the-future" class="titleslide slide level1 center">
@@ -865,11 +1070,15 @@ Same idea, different implementation. Goal is to find good flame simulations. Thi
 <li>Understand what &quot;understandability&quot; means</li>
 </ul>
 <aside class="notes">
-<p>Active learning Humans: intuition, computers: data processing</p>
-<p>Many tools are specific to a type of model</p>
-Understandability is only asserted
+<ul>
+  <li> Active learning Humans: intuition, computers: data processing</li>
+  <li> Many tools are specific to a type of model</li>
+  <li> Understandability is only asserted</li>
+</ul>
 </aside>
-</section><section id="thanks" class="slide level2">
+</section>
+
+<section id="thanks" class="slide level2">
 <h2>Thanks!</h2>
 <p>
   <a href="mailto:thomas.torsney-weir@univie.ac.at">
@@ -897,6 +1106,7 @@ Understandability is only asserted
         slideNumber: 'c/t',
         transition: 'none',
         center: false,
+        history: true,
 
         // Optional reveal.js plugins
         dependencies: [
