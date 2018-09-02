@@ -29,7 +29,7 @@
     <div class="slides">
 
 <section class="slide center">
-  <h1 class="title">Visualization of machine learning algorithms</h1>
+  <h1 class="title">Vis tools and case studies</h1>
   <p class="author">Thomas Torsney-Weir</p>
   <p class="date">VDA research group, University of Vienna</p>
 </section>
@@ -331,11 +331,36 @@ P(C=c_k | X=x) = \frac{P(X=x | C=c_k) P(C=c_k)}{P(X=x)}
 </ul>
 </section>
 
+<section id="challenges" class="slide level2">
+<h2>Why is this hard?</h2>
+<div class="columns">
+  <div class="column">
+<h3>Machine learning</h3>
+<ul>
+<li>Fast algorithms</li>
+<li>Sufficient data</li>
+<li>Automatic learning</li>
+</ul>
+  </div>
+  <div class="column">
+<h3>Visualization</h3>
+<ul>
+<li>Multi-dimensional spaces</li>
+<li>Comparing complex data</li>
+<li>Showing uncertainty</li>
+</ul>
+  </div>
+</div>
+<aside class="notes">
+  Complex data like images, videos, etc
+</aside>
+</section>
+
 </section>
 
 <section>
 
-<section id="building-models" class="titleslide slide level1 center">
+<section id="vis-helping-ml" class="titleslide slide level1 center">
 <h1>Vis helping ML</h1>
 </section>
 
@@ -431,12 +456,47 @@ Same algo different params
 <h2>How to study them?</h2>
 <p>run a bunch of models and examine outputs</p>
 <ul>
-<li>design galleries</li>
 <li>paramorama</li>
+<li>design galleries</li>
 </ul>
 <aside class="notes">
 Works well when you have no real metric for what you're looking for
 </aside>
+</section>
+
+<section id="paramorama-1" class="slide level2">
+<h2>Paramorama</h2>
+<div class="columns">
+  <div class="column">
+<figure>
+<img src="images/paramorama_sampling_1.png" />
+<span class="caption">Manual sampling</span>
+</figure>
+  </div>
+  <div class="column">
+<figure class="fragment">
+<img src="images/paramorama_sampling_2.png" />
+<span class="caption">Automated sampling</span>
+</figure>
+  </div>
+</div>
+<p><span class="citation" data-cites="Pretorius:2011">Pretorius, A. Johannes, Mark-Anthony P. Bray, Anne E. Carpenter, and Roy A. Ruddle. “Visualization of parameter space for image analysis,” 2011.</span></p>
+</section>
+
+<section id="paramorama-2" class="slide level2">
+<h2>Paramorama</h2>
+<figure>
+<img src="images/paramorama_interface.png" />
+</figure>
+<p><span class="citation" data-cites="Pretorius:2011">Pretorius, A. Johannes, Mark-Anthony P. Bray, Anne E. Carpenter, and Roy A. Ruddle. “Visualization of parameter space for image analysis,” 2011.</span></p>
+</section>
+
+<section id="paramorama-3" class="slide level2">
+<h2>Paramorama</h2>
+<figure>
+<img src="images/paramorama_goodbad.png" />
+</figure>
+<p><span class="citation" data-cites="Pretorius:2011">Pretorius, A. Johannes, Mark-Anthony P. Bray, Anne E. Carpenter, and Roy A. Ruddle. “Visualization of parameter space for image analysis,” 2011.</span></p>
 </section>
 
 <section id="design-galleries" class="slide level2">
@@ -447,6 +507,7 @@ Works well when you have no real metric for what you're looking for
 <p><span class="citation" data-cites="Marks:1997">Marks, Joe, Brad Andalman, Paul A. Beardsley, William Freeman, Sarah Gibson, Jessica Hodgins, Thomas Kang, et al. “Design Galleries: A general approach to setting parameters for computer graphics and animation,” 1997.</span></p>
 </section>
 
+<!--
 <section id="design-galleries-1" class="slide level2">
 <h2>Design galleries</h2>
 <figure>
@@ -454,18 +515,17 @@ Works well when you have no real metric for what you're looking for
 </figure>
 <p><span class="citation" data-cites="Marks:1997">Marks, Joe, Brad Andalman, Paul A. Beardsley, William Freeman, Sarah Gibson, Jessica Hodgins, Thomas Kang, et al. “Design Galleries: A general approach to setting parameters for computer graphics and animation,” 1997.</span></p>
 </section>
-
-<section id="paramorama" class="slide level2">
-<h2>Paramorama</h2>
-<figure>
-<img src="images/paramorama_interface.png" />
-</figure>
-<p><span class="citation" data-cites="Pretorius:2011">Pretorius, A. Johannes, Mark-Anthony P. Bray, Anne E. Carpenter, and Roy A. Ruddle. “Visualization of parameter space for image analysis,” 2011.</span></p>
-</section>
+-->
 
 <section id="how-to-study-them-1" class="slide level2">
 <h2>How to study them?</h2>
 <p>use a more principled approach</p>
+<figure>
+<img style="height:400px" src="images/paramorama_sampling_2.png" />
+</figure>
+<aside class="notes">
+  Ask people what part could be more automated/checked
+</aside>
 </section>
 
 <section id="objective-measures" class="slide level2">
@@ -477,26 +537,62 @@ Works well when you have no real metric for what you're looking for
 
 <section id="visual-parameter-space-exploration" class="slide level2">
 <h2>Visual parameter space exploration</h2>
-<ul>
-<li>intro</li>
-<li>conceptual pipeline</li>
-</ul>
 <figure>
 <img src="images/vpsa_pipeline.png" alt="conceptual pipeline" />
+<span class="caption">conceptual pipeline</span>
 </figure>
 <p>
 <span class="citation" data-cites="Sedlmair:2014"> Michael Sedlmair, Christoph Heinzl, Stefan Bruckner, Harald Piringer, and Torsten Möller &quot;Visual parameter space analysis: A conceptual framework&quot; IEEE Transactions on Visualization and Computer Graphics. 20(12) 2014. </span>
 </p>
 </section>
 
-<section id="tuner" class="slide level2">
+<section id="tuner-1" class="slide level2">
 <h2>Tuner</h2>
 <figure>
 <img src="images/tuner_pipeline.svg" alt="image segmentation pipeline" />
 </figure>
 <p><span class="citation" data-cites="Torsney-Weir:2011">Torsney-Weir, Thomas, Ahmed Saad, Torsten Möller, Britta Weber, Hans-Christian Hege, Jean-Marc Verbavatz, and Steven Bergner. “Tuner: Principled parameter finding for image segmentation algorithms using visual response surface exploration,” 2011.</span></p>
+
+<aside class="notes">
+  Explain pipeline and that we have multiple inputs and multiple outputs and
+  how we want to compare them. Tie these back to the challenges from before
+</aside>
 </section>
 
+<section id="tuner-2" class="slide level2">
+<h2>Tuner</h2>
+<figure>
+<img src="images/tuner_overview.png" alt="image segmentation pipeline" />
+</figure>
+<p><span class="citation" data-cites="Torsney-Weir:2011">Torsney-Weir, Thomas, Ahmed Saad, Torsten Möller, Britta Weber, Hans-Christian Hege, Jean-Marc Verbavatz, and Steven Bergner. “Tuner: Principled parameter finding for image segmentation algorithms using visual response surface exploration,” 2011.</span></p>
+</section>
+
+<section id="tuner-3" class="slide level2">
+<h2>Tuner</h2>
+<figure>
+<img src="images/tuner_inputs.png" alt="image segmentation pipeline" />
+</figure>
+<p><span class="citation" data-cites="Torsney-Weir:2011">Torsney-Weir, Thomas, Ahmed Saad, Torsten Möller, Britta Weber, Hans-Christian Hege, Jean-Marc Verbavatz, and Steven Bergner. “Tuner: Principled parameter finding for image segmentation algorithms using visual response surface exploration,” 2011.</span></p>
+
+<aside class="notes">
+Take time to explain each panel is a pair of dimensions, concept of a 
+focus point
+</aside>
+</section>
+
+<section id="tuner-4" class="slide level2">
+<h2>Tuner</h2>
+<figure>
+<img src="images/tuner_zoom.png" alt="image segmentation pipeline" />
+</figure>
+<p><span class="citation" data-cites="Torsney-Weir:2011">Torsney-Weir, Thomas, Ahmed Saad, Torsten Möller, Britta Weber, Hans-Christian Hege, Jean-Marc Verbavatz, and Steven Bergner. “Tuner: Principled parameter finding for image segmentation algorithms using visual response surface exploration,” 2011.</span></p>
+
+<aside class="notes">
+  explain about balancing the outputs, how they are linked to the focus point
+</aside>
+</section>
+
+<!--
 <section id="real-time-parameter-tuning" class="slide level2">
 <h2>Real-time parameter selection</h2>
 <figure>
@@ -504,6 +600,7 @@ Works well when you have no real metric for what you're looking for
 </figure>
 <p><span class="caption">Lindhart et al. 2018?</span></p>
 </section>
+-->
 
 <section id="building-models-1" class="slide level2">
 <h2>Building models</h2>
@@ -561,6 +658,13 @@ CS people love algorithms but params are important
 <img src="images/hypermoval_interface.png" />
 </figure>
 <p><span class="citation" data-cites="Piringer:2010">Piringer, Harald, Wolfgang Berger, and Jurgen Krasser. “HyperMoVal: Interactive visual validation of regression models for real-time simulation,” 2010.</span></p>
+
+<aside class="notes">
+<ul>
+  <li>Size of points is related to prediction error</li>
+  <li>Green point is sample for focus point</li>
+</ul>
+</aside>
 </section>
 
 <section id="sliceplorer-views" class="slide level2">
@@ -613,6 +717,15 @@ CS people love algorithms but params are important
   </figure>
 </div>
 </div>
+</section>
+
+<section id="vvm-summary" class="slide level2">
+<h2>Validating and verifying models</h2>
+<ul>
+<li>Understand fit for individual samples</li>
+<li>Visual inspection to understand extrapolation</li>
+<li>Uncertainty can help to understand quality of prediction</li>
+</ul>
 </section>
 
 </section>
@@ -778,8 +891,13 @@ Popular in video games
 <figure>
 <img src="images/nn.jpg" />
 </figure>
+
+<aside class="notes">
+  There's alot going on inside complex networks
+</aside>
 </section>
 
+<!--
 <section id="lstmvis" class="slide level2">
 <h2>LSTMVis</h2>
 <figure>
@@ -804,29 +922,60 @@ Popular in video games
 <aside class="notes">
 </aside>
 </section>
+-->
 
 <section id="deepeyes" class="slide level2">
 <h2>DeepEyes</h2>
+<p>How many layers are needed?</p>
 <figure>
-<img src="images/deepeyes_interface.png" />
+<img style="height:400px" src="images/deepeyes_interface.png" />
 </figure>
 <p><span class="citation" data-cites="Pezzotti:2018">Pezzotti, Nicola, Thomas Höllt, Jan van Gemert, Boudewijn Lelieveldt, Elmar Eisemann, and Anna Vilanova. “DeepEyes: Progressive visual analytics for designing deep neural networks,” 2018.</span></p>
 
 <aside class="notes">
-Fig. 1. DeepEyes is a Progressive Visual Analytics system for the analysis of deep neural networks during training. The overview
-on the training is given by the commonly used loss- and accuracy-curves (a) and the Perplexity Histograms (b) a novel visualization
-that allows the detection of stable layers. A detailed analysis per layer is performed in three tightly linked visualizations. Degenerated
-filters are detected in the Activation Heatmap (c), and filter activations are visualized on the Input Map (d). Finally, in the Filter Map (e),
-relationships among the filters in a layer are visualized.
+  Idea is that you can see an overview of all the layers (B) plus get detail on
+  a single layer. (A) is loss and accuracy curves as the network trains. 
+  Different levels of overview!
+</aside>
+</section>
+
+<section id="deepeyes-histos" class="slide level2">
+<h2>DeepEyes</h2>
+<p>How stable are the layers?</p>
+<figure>
+<img style="height:400px" src="images/deepeyes_histo.png" />
+</figure>
+<p><span class="citation" data-cites="Pezzotti:2018">Pezzotti, Nicola, Thomas Höllt, Jan van Gemert, Boudewijn Lelieveldt, Elmar Eisemann, and Anna Vilanova. “DeepEyes: Progressive visual analytics for designing deep neural networks,” 2018.</span></p>
+
+<aside class="notes">
+<ul>
+  <li>stable=layer is learning something</li>
+  <li>decreasing=layer is less important</li>
+  <li>increasing=layer is more important</li>
+</ul>
+perplexity is how many neurons are activated at the same level
+<ul>
+  <li>upper histogram - current perplexity</li>
+  <li>lower histogram - change (red down/green up)</li>
+  <li>idea is that the second layer is becomming less specific as the first gets more specific</li>
+</ul>
 </aside>
 </section>
 
 <section id="deepeyes-1" class="slide level2">
 <h2>DeepEyes</h2>
+<p>How discriminating are the layers?</p>
+<figure>
+<img style="height:150px" src="images/deepeyes_nn.png" />
+</figure>
 <figure>
 <img src="images/deepeyes_detail.png" />
 </figure>
 <p><span class="citation" data-cites="Pezzotti:2018">Pezzotti, Nicola, Thomas Höllt, Jan van Gemert, Boudewijn Lelieveldt, Elmar Eisemann, and Anna Vilanova. “DeepEyes: Progressive visual analytics for designing deep neural networks,” 2018.</span></p>
+<aside class="notes">
+  Colors are the classes, clustered by activation, idea is to have classes all
+  group together
+</aside>
 </section>
 
 </section>
